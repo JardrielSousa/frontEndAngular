@@ -11,11 +11,11 @@ export class FormComponent implements OnInit {
   obj:any;
   userCreated : User;
   profileForm = this.fb.group({
-    firstName: ['',[Validators.required,Validators.minLength(4)]],
-    lastName: ['',[Validators.required,Validators.minLength(4)]],
-    phone : ['',Validators.required],
-    street:['',Validators.required],
-    zipcode:['',Validators.required]
+    firstName: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
+    lastName: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
+    phone : ['',[Validators.required,Validators.minLength(11),Validators.maxLength(11)]],
+    street:['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
+    zipcode:['',[Validators.required,Validators.minLength(8),Validators.maxLength(8)]]
   });
 
   constructor(private fb: FormBuilder,private userService:UserServiceService) { }
@@ -24,11 +24,17 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-      this.userService.create(this.profileForm.value)
+    this.profileForm.markAllAsTouched();
+    if(this.profileForm.invalid)
+      return;
+    this.userService.create(this.profileForm.value)
       .subscribe(user=>{
         this.userCreated = user;
       });
   }
 
+  get f(){
+    return this.profileForm.controls
+  }
 
 }

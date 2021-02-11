@@ -5,26 +5,51 @@
   <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
     <label>
-      First Name:
-      <input type="text" formControlName="firstName" >
+      First Name*:
+      <input type="text" name="firstName" formControlName="firstName" >
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.required">Campo Obrigatório</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.minlength">Campo precisa ter no minimo 2 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+      </div>
     </label>
 
     <label>
-      Last Name:
+      Last Name*:
       <input type="text" formControlName="lastName">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">Campo Obrigatório</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.minlength">Campo precisa ter no minimo 2 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+      </div>
     </label>
     <label>
-      Phone Number:
-      <input type="text" formControlName="phone">
+      Phone Number*:
+      <input type="text"  formControlName="phone">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.required">Campo Obrigatório</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.minlength">Campo precisa ter no minimo 11 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.maxlength">Campo pode ter no máximo 11 caracteries</mat-error>
+      </div>
     </label>
     <label>
-      zip code:
+      zip code*:
       <input type="text" formControlName="zipcode">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.required">Campo Obrigatório</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">Campo precisa ter no minimo 8 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.maxlength">Campo pode ter no máximo 8 caracteries</mat-error>
+      </div>
     </label>
     <label>
-      Street:
+      Street*:
       <input type="text" formControlName="street">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.required">Campo Obrigatório</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.minlength">Campo precisa ter no minimo 4 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+      </div>
     </label>
-    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </div>
