@@ -1,0 +1,20 @@
+{
+  "user": {
+    "title":"Register of users",
+    "firstName":"First Name*:",
+    "lastName":"Last Name*:",
+    "phoneNumber":"Phone Number*:",
+    "zipCode":"Zip Code*:",
+    "street":"Street*:",
+    "submit":"submit"
+  },
+  "errors":{
+    "requiredField":"Required field",
+    "fieldMinlength":"Field must have at least 4 characters",
+    "fieldMaxlength":"Field can have a maximum of 256 characters",
+    "fieldMinlengthPhone":"Field must have at least 11 characters",
+    "fieldMaxlengthPhone":"Field can have a maximum of 11 characters",
+    "fieldMinlengthZipCode":"Field must have at least 8 characters",
+    "fieldMaxlengthZipCode":"Field can have a maximum of 8 characters"
+  }
+}

@@ -1,55 +1,55 @@
 <div class="container">
   <div>
-    <h1>Register of users</h1>
+    <h1>{{'user.title' | translate}}</h1>
   </div>
   <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
     <label>
-      First Name*:
+      {{'user.firstName' | translate}}
       <input type="text" name="firstName" formControlName="firstName" >
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.required">Campo Obrigatório</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.minlength">Campo precisa ter no minimo 2 caracteries</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
       </div>
     </label>
 
     <label>
-      Last Name*:
+      {{'user.lastName' | translate}}
       <input type="text" formControlName="lastName">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">Campo Obrigatório</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.minlength">Campo precisa ter no minimo 2 caracteries</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
       </div>
     </label>
     <label>
-      Phone Number*:
+      {{'user.phoneNumber' | translate}}
       <input type="text"  formControlName="phone">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.required">Campo Obrigatório</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.minlength">Campo precisa ter no minimo 11 caracteries</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.maxlength">Campo pode ter no máximo 11 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.minlength">{{'errors.fieldMinlengthPhone' | translate }}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.maxlength">{{'errors.fieldMaxlengthPhone' | translate}}</mat-error>
       </div>
     </label>
     <label>
-      zip code*:
+      {{'user.zipCode' | translate}}
       <input type="text" formControlName="zipcode">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.required">Campo Obrigatório</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">Campo precisa ter no minimo 8 caracteries</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.maxlength">Campo pode ter no máximo 8 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">{{'errors.fieldMinlengthZipCode' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.maxlength">{{'errors.fieldMaxlengthZipCode' | translate}}</mat-error>
       </div>
     </label>
     <label>
-      Street*:
+      {{'user.street' | translate}}
       <input type="text" formControlName="street">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.required">Campo Obrigatório</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.minlength">Campo precisa ter no minimo 4 caracteries</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.maxlength">Campo pode ter no máximo 256 caracteries</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.street.errors && f.street.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
       </div>
     </label>
-    <button type="submit">Submit</button>
+    <button type="submit">{{'user.submit' | translate}}</button>
   </form>
 </div>

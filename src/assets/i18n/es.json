@@ -1,0 +1,20 @@
+{
+  "user": {
+    "title":"Registro de usuarias(os)",
+    "firstName":"Primer nombre*:",
+    "lastName":"Apellido*:",
+    "phoneNumber":"Número de teléfono*:",
+    "zipCode":"Código postal*:",
+    "street":"Calle*:",
+    "submit":"enviar"
+  },
+  "errors":{
+    "requiredField":"Campo requerido",
+    "fieldMinlength":"El campo debe tener al menos 4 caracteres",
+    "fieldMaxlength":"El campo puede tener un máximo de 256 caracteres",
+    "fieldMinlengthPhone":"El campo debe tener al menos 11 caracteres",
+    "fieldMaxlengthPhone":"El campo puede tener un máximo de 11 caracteres",
+    "fieldMinlengthZipCode":"El campo debe tener al menos 8 caracteres",
+    "fieldMaxlengthZipCode":"El campo puede tener un máximo de 8 caracteres"
+  }
+}

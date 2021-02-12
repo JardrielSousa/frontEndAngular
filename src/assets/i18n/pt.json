@@ -1,0 +1,20 @@
+{
+  "user": {
+    "title":"Cadastro de Usuários",
+    "firstName":"Primeiro Nome*:",
+    "lastName":"Ultimo Nome*:",
+    "phoneNumber":"Telefone*:",
+    "zipCode":"CEP*:",
+    "street":"Endereço*:",
+    "submit":"Enviar"
+  },
+  "errors":{
+    "requiredField":"Campo Obrigatório",
+    "fieldMinlength":"Campo precisa ter no minimo 4 caracteries",
+    "fieldMaxlength":"Campo pode ter no máximo 256 caracteries",
+    "fieldMinlengthPhone":"Campo precisa ter no minimo 11 caracteries",
+    "fieldMaxlengthPhone":"Campo pode ter no máximo 11 caracteries",
+    "fieldMinlengthZipCode":"Campo precisa ter no minimo 8 caracteries",
+    "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries"
+  }
+}

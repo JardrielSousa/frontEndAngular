@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'form';
+  langs = ['en', 'pt','es'];
+  constructor(private translateService: TranslateService) {
+}
+public ngOnInit(): void {
+  let browserlang = this.translateService.getBrowserLang();
+  if (this.langs.indexOf(browserlang) > -1) {
+    this.setLanguage(browserlang);
+  } else {
+    this.setLanguage('en');
+  }
+}
+
+  private setLanguage(browserlang: string) {
+    this.translateService.setDefaultLang(browserlang);
+  }
 }
