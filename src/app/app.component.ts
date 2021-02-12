@@ -19,7 +19,7 @@ public ngOnInit(): void {
   }
 }
 
-  private setLanguage(browserlang: string) {
+  setLanguage(browserlang: string) {
     this.translateService.setDefaultLang(browserlang);
   }
 }
