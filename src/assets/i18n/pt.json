@@ -16,5 +16,6 @@
     "fieldMaxlengthPhone":"Campo pode ter no máximo 11 caracteries",
     "fieldMinlengthZipCode":"Campo precisa ter no minimo 8 caracteries",
     "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries"
-  }
+  },
+  "internacionalization":"Internacionalização"
 }
