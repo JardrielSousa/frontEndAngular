@@ -3,6 +3,8 @@
     "title":"Register of users",
     "firstName":"First Name*:",
     "lastName":"Last Name*:",
+    "email":"Email*:",
+    "password":"Password*:",
     "phoneNumber":"Phone Number*:",
     "zipCode":"Zip Code*:",
     "street":"Street*:",
@@ -15,8 +17,10 @@
     "fieldMinlengthPhone":"Field must have at least 11 characters",
     "fieldMaxlengthPhone":"Field can have a maximum of 11 characters",
     "fieldMinlengthZipCode":"Field must have at least 8 characters",
-    "fieldMaxlengthZipCode":"Field can have a maximum of 8 characters"
+    "fieldMaxlengthZipCode":"Field can have a maximum of 8 characters",
+    "feedbackEmail": "Please enter a valid email"
   },
   "internacionalization":"Internationalization",
-  "pageNotFound":"Page not Found"
+  "pageNotFound":"Page not Found",
+  "logout":"logout"
 }

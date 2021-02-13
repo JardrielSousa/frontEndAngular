@@ -14,13 +14,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Error404ComponentComponent } from './error404-component/error404-component.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     LoginComponent,
-    Error404ComponentComponent
+    Error404ComponentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

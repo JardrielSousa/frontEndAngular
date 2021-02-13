@@ -33,4 +33,8 @@ export class UserServiceService {
     return this.http.get<any[]>(this.baseUrl)
   }
 
+  readBy(loginForm:any):Observable<any>{
+    return this.http.get<any>(this.baseUrl+'/?email='+loginForm.email,loginForm);
+  }
+
 }

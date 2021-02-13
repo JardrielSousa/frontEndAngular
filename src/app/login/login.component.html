@@ -5,13 +5,26 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label>
       email:
-      <input type="email" name="email" >
+      <input type="email" name="email" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" >
+      <div>
+        <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.email.errors && f.email.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.email.errors && f.email.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+      </div>
     </label>
 
     <label>
       senha:
-      <input type="password" name="password">
+      <input type="password" name="password" formControlName="password">
+      <div>
+        <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.password.errors && f.password.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.password.errors && f.password.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+        <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.password.errors && f.password.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
+      </div>
     </label>
+    <div>
+       <mat-error *ngIf="feedbackLogin">Email ou senha inválidos</mat-error>
+    </div>
+
     <div>
       <h3>Não tem cadastro?</h3>
       <a routerLink="/register">Cadastre-se</a>

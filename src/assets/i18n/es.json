@@ -3,6 +3,8 @@
     "title":"Registro de usuarias(os)",
     "firstName":"Primer nombre*:",
     "lastName":"Apellido*:",
+    "email":"Email*:",
+    "password":"Password*:",
     "phoneNumber":"Número de teléfono*:",
     "zipCode":"Código postal*:",
     "street":"Calle*:",
@@ -15,8 +17,10 @@
     "fieldMinlengthPhone":"El campo debe tener al menos 11 caracteres",
     "fieldMaxlengthPhone":"El campo puede tener un máximo de 11 caracteres",
     "fieldMinlengthZipCode":"El campo debe tener al menos 8 caracteres",
-    "fieldMaxlengthZipCode":"El campo puede tener un máximo de 8 caracteres"
+    "fieldMaxlengthZipCode":"El campo puede tener un máximo de 8 caracteres",
+    "feedbackEmail": "Introduzca un correo electrónico válido"
   },
   "internacionalization":"Internacionalización",
-  "pageNotFound":"página no encontrada"
+  "pageNotFound":"página no encontrada",
+  "logout":"cerrar sesión"
 }

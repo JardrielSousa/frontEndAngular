@@ -12,9 +12,12 @@ import { User } from '../model/user';
 export class FormComponent implements OnInit {
   obj:any;
   userCreated : User;
+  feedbackEmail:boolean = false;
   profileForm = this.fb.group({
     firstName: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
     lastName: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
+    email: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
+    password: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
     phone : ['',[Validators.required,Validators.minLength(11),Validators.maxLength(11)]],
     street:['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
     zipcode:['',[Validators.required,Validators.minLength(8),Validators.maxLength(8)]]
@@ -25,7 +28,7 @@ export class FormComponent implements OnInit {
     private router : Router
     ) { }
   ngOnInit(): void {
-
+    this.feedbackEmail = false;
   }
 
   onSubmit() {
@@ -44,6 +47,14 @@ export class FormComponent implements OnInit {
 
   get f(){
     return this.profileForm.controls
+  }
+
+  verifyEmail(email){
+    if(email?.length>4 && email.includes("@")){
+      this.feedbackEmail = false;
+    }else{
+      this.feedbackEmail = true;
+    }
   }
 
 }

@@ -24,6 +24,23 @@
       </div>
     </label>
     <label>
+      {{'user.email' | translate}}
+      <input type="text" formControlName="email" (keyup)="verifyEmail(f.email.value)">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">{{'errors.requiredField' | translate}}</mat-error><br>
+        <mat-error *ngIf="feedbackEmail">{{'errors.feedbackEmail' | translate}}</mat-error>
+      </div>
+    </label>
+    <label>
+      {{'user.password' | translate}}
+      <input type="text" formControlName="password">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
+      </div>
+    </label>
+    <label>
       {{'user.phoneNumber' | translate}}
       <input type="text"  formControlName="phone">
       <div>
@@ -34,7 +51,7 @@
     </label>
     <label>
       {{'user.zipCode' | translate}}
-      <input type="text" formControlName="zipcode">
+      <input type="text" formControlName="zipcode" >
       <div>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.required">{{'errors.requiredField' | translate}}</mat-error>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">{{'errors.fieldMinlengthZipCode' | translate}}</mat-error>

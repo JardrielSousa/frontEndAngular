@@ -3,6 +3,8 @@
     "title":"Cadastro de Usuários",
     "firstName":"Primeiro Nome*:",
     "lastName":"Ultimo Nome*:",
+    "email":"Email*:",
+    "password":"Password*:",
     "phoneNumber":"Telefone*:",
     "zipCode":"CEP*:",
     "street":"Endereço*:",
@@ -15,8 +17,10 @@
     "fieldMinlengthPhone":"Campo precisa ter no minimo 11 caracteries",
     "fieldMaxlengthPhone":"Campo pode ter no máximo 11 caracteries",
     "fieldMinlengthZipCode":"Campo precisa ter no minimo 8 caracteries",
-    "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries"
+    "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries",
+    "feedbackEmail":"Digite um Email válido"
   },
   "internacionalization":"Internacionalização",
-  "pageNotFound":"Página não encontrada"
+  "pageNotFound":"Página não encontrada",
+  "logout":"sair"
 }
