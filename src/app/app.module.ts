@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { MatSliderModule } from '@angular/material/slider';
@@ -13,15 +12,18 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { Error404ComponentComponent } from './error404-component/error404-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    LoginComponent
+    LoginComponent,
+    Error404ComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSliderModule,
@@ -34,7 +36,8 @@ import { LoginComponent } from './login/login.component';
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+  AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

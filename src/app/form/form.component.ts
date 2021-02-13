@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import {UserServiceService} from 'src/app/service/user-service.service';
 import { User } from '../model/user';
 
@@ -20,7 +21,9 @@ export class FormComponent implements OnInit {
   });
 
   constructor(private fb: FormBuilder,
-    private userService:UserServiceService) { }
+    private userService:UserServiceService,
+    private router : Router
+    ) { }
   ngOnInit(): void {
 
   }
@@ -33,6 +36,7 @@ export class FormComponent implements OnInit {
       .subscribe(user=>{
         this.userCreated = user;
         this.userService.verMsg('usuário Criado!!!');
+        this.router.navigate(['/login'])
       },error=>{
         this.userService.verMsg('Error ao criar usuário Criado!!!',true);
       })
