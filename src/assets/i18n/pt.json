@@ -5,6 +5,7 @@
     "lastName":"Ultimo Nome*:",
     "email":"Email*:",
     "password":"Password*:",
+    "confirmPassword":"Confirme sua senha*:",
     "phoneNumber":"Telefone*:",
     "zipCode":"CEP*:",
     "street":"Endereço*:",
@@ -16,9 +17,13 @@
     "fieldMaxlength":"Campo pode ter no máximo 256 caracteries",
     "fieldMinlengthPhone":"Campo precisa ter no minimo 11 caracteries",
     "fieldMaxlengthPhone":"Campo pode ter no máximo 11 caracteries",
-    "fieldMinlengthZipCode":"Campo precisa ter no minimo 8 caracteries",
-    "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries",
-    "feedbackEmail":"Digite um Email válido"
+    "fieldMinlength8":"Campo precisa ter no minimo 8 caracteries",
+    "fieldMaxlength8":"Campo pode ter no máximo 8 caracteries",
+    "feedbackEmail":"Digite um Email válido",
+    "feedbackPassword":"A senha precisa de um charactere especial , número e letra maiúscula",
+    "feedbackNumber":"Digite apenas números",
+    "feedbackConfirmPassword":"As senhas precisam ser iguais"
+
   },
   "internacionalization":"Internacionalização",
   "pageNotFound":"Página não encontrada",

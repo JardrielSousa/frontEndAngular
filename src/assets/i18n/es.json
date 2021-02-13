@@ -5,6 +5,7 @@
     "lastName":"Apellido*:",
     "email":"Email*:",
     "password":"Password*:",
+    "confirmPassword":"Confirmar Contraseña*:",
     "phoneNumber":"Número de teléfono*:",
     "zipCode":"Código postal*:",
     "street":"Calle*:",
@@ -16,9 +17,12 @@
     "fieldMaxlength":"El campo puede tener un máximo de 256 caracteres",
     "fieldMinlengthPhone":"El campo debe tener al menos 11 caracteres",
     "fieldMaxlengthPhone":"El campo puede tener un máximo de 11 caracteres",
-    "fieldMinlengthZipCode":"El campo debe tener al menos 8 caracteres",
-    "fieldMaxlengthZipCode":"El campo puede tener un máximo de 8 caracteres",
-    "feedbackEmail": "Introduzca un correo electrónico válido"
+    "fieldMinlength8":"El campo debe tener al menos 8 caracteres",
+    "fieldMaxlength8":"El campo puede tener un máximo de 8 caracteres",
+    "feedbackEmail": "Introduzca un correo electrónico válido",
+    "feedbackPassword": "La contraseña necesita un carácter especial, un número y una letra mayúscula",
+    "feedbackNumber": "Teclado solo números",
+    "feedbackConfirmPassword": "las contraseñas deben ser iguales"
   },
   "internacionalization":"Internacionalización",
   "pageNotFound":"página no encontrada",

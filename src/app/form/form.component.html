@@ -6,7 +6,7 @@
 
     <label>
       {{'user.firstName' | translate}}
-      <input type="text" name="firstName" formControlName="firstName" >
+      <input type="text" name="firstName" formControlName="firstName" required >
       <div>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.required">{{'errors.requiredField' | translate}}</mat-error>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.firstName.errors && f.firstName.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
@@ -25,37 +25,49 @@
     </label>
     <label>
       {{'user.email' | translate}}
-      <input type="text" formControlName="email" (keyup)="verifyEmail(f.email.value)">
+      <input type="text" formControlName="email" placeholder="test@email.com" (keyup)="verifyEmail(f.email.value)">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">{{'errors.requiredField' | translate}}</mat-error><br>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.email.errors && f.email.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.email.errors && f.email.errors.minlength">{{'errors.fieldMinlength8' | translate}}</mat-error><br *ngIf="feedbackEmail">
         <mat-error *ngIf="feedbackEmail">{{'errors.feedbackEmail' | translate}}</mat-error>
       </div>
     </label>
     <label>
       {{'user.password' | translate}}
-      <input type="text" formControlName="password">
+      <input type="text" formControlName="password" (keyup)="verifyPassword(f.password.value)">
       <div>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.required">{{'errors.requiredField' | translate}}</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.minlength">{{'errors.fieldMinlength' | translate}}</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.lastName.errors && f.lastName.errors.maxlength">{{'errors.fieldMaxlength' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.password.errors && f.password.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.password.errors && f.password.errors.minlength">{{'errors.fieldMinlength8' | translate}}</mat-error><br *ngIf="feedbackPassword">
+        <mat-error *ngIf="feedbackPassword">{{'errors.feedbackPassword' | translate}}</mat-error>
+      </div>
+    </label>
+    <label>
+      {{'user.confirmPassword' | translate}}
+      <input type="text" formControlName="confirmPassword" (keyup)="verifyPasswords(f.confirmPassword.value,f.password.value)">
+      <div>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.confirmPassword.errors && f.confirmPassword.errors.required">{{'errors.requiredField' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.confirmPassword.errors && f.confirmPassword.errors.minlength">{{'errors.fieldMinlength8' | translate}}</mat-error><br *ngIf="feedbackConfirmPassword">
+        <mat-error *ngIf="feedbackConfirmPassword">{{'errors.feedbackConfirmPassword' | translate}}</mat-error>
       </div>
     </label>
     <label>
       {{'user.phoneNumber' | translate}}
-      <input type="text"  formControlName="phone">
+      <input type="text"  formControlName="phone" placeholder="(00) 90000-0000" (keyup)="verifyNumbers(f.phone.value)">
       <div>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.required">{{'errors.requiredField' | translate}}</mat-error>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.minlength">{{'errors.fieldMinlengthPhone' | translate }}</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.maxlength">{{'errors.fieldMaxlengthPhone' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.phone.errors && f.phone.errors.maxlength">{{'errors.fieldMaxlengthPhone' | translate}}</mat-error><br *ngIf="feedbackNumber">
+        <mat-error *ngIf="feedbackNumber">{{'errors.feedbackNumber' | translate}}</mat-error>
       </div>
     </label>
     <label>
       {{'user.zipCode' | translate}}
-      <input type="text" formControlName="zipcode" >
+      <input type="text" formControlName="zipcode" placeholder="00000-0000" (keyup)="verifyNumbers(f.zipcode.value)">
       <div>
         <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.required">{{'errors.requiredField' | translate}}</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">{{'errors.fieldMinlengthZipCode' | translate}}</mat-error>
-        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.maxlength">{{'errors.fieldMaxlengthZipCode' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.minlength">{{'errors.fieldMinlength8' | translate}}</mat-error>
+        <mat-error *ngIf="(profileForm.touched || profileForm.dirty) && f.zipcode.errors && f.zipcode.errors.maxlength">{{'errors.fieldMaxlength8' | translate}}</mat-error><br *ngIf="feedbackNumber">
+        <mat-error *ngIf="feedbackNumber">{{'errors.feedbackNumber' | translate}}</mat-error>
       </div>
     </label>
     <label>
