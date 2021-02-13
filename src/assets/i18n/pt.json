@@ -17,5 +17,6 @@
     "fieldMinlengthZipCode":"Campo precisa ter no minimo 8 caracteries",
     "fieldMaxlengthZipCode":"Campo pode ter no máximo 8 caracteries"
   },
-  "internacionalization":"Internacionalização"
+  "internacionalization":"Internacionalização",
+  "pageNotFound":"Página não encontrada"
 }
