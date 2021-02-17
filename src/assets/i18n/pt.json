@@ -11,6 +11,16 @@
     "street":"Endereço*:",
     "submit":"Enviar"
   },
+  "login":{
+    "login":"Login",
+    "email":"Email*:",
+    "password":"Senha*:",
+    "label": "Não tem registro?",
+    "link":"Cadastre-se",
+    "submit":"enviar",
+    "invalid":"Email ou senha inválidos"
+
+  },
   "errors":{
     "requiredField":"Campo Obrigatório",
     "fieldMinlength":"Campo precisa ter no minimo 4 caracteries",

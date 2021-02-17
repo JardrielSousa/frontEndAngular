@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Error404ComponentComponent } from './error404-component/error404-component.component';
 import { HomeComponent } from './home/home.component';
+import { NacionalizationComponent } from './nacionalization/nacionalization.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     FormComponent,
     LoginComponent,
     Error404ComponentComponent,
-    HomeComponent
+    HomeComponent,
+    NacionalizationComponent
   ],
   imports: [
     BrowserModule,

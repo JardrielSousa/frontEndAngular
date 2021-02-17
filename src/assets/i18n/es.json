@@ -11,6 +11,15 @@
     "street":"Calle*:",
     "submit":"enviar"
   },
+   "login":{
+     "login": "Iniciar sesión",
+     "email": "Correo electrónico *:",
+     "password": "Contraseña *:",
+     "label": "¿No tienes un registro?",
+     "link":"Registrarse",
+     "submit":"enviar",
+     "invalid": "Correo electrónico o contraseña no válidos"
+  },
   "errors":{
     "requiredField":"Campo requerido",
     "fieldMinlength":"El campo debe tener al menos 4 caracteres",

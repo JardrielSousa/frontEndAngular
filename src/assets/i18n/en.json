@@ -11,6 +11,15 @@
     "street":"Street*:",
     "submit":"submit"
   },
+   "login":{
+     "login": "Login",
+     "email":"Email*:",
+     "password":"Password*:",
+     "label":"Don't have a registration?",
+     "link":"Register",
+     "submit":"submit",
+     "invalid": "Invalid email or password"
+  },
   "errors":{
     "requiredField":"Required field",
     "fieldMinlength":"Field must have at least 4 characters",

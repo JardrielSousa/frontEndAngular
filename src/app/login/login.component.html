@@ -1,10 +1,10 @@
 <div class="container">
   <div>
-    <h1>Login</h1>
+    <h1>{{'login.login' | translate}}</h1>
   </div>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label>
-      email:
+      {{'login.email' | translate}}
       <input type="email" name="email" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" >
       <div>
         <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.email.errors && f.email.errors.required">{{'errors.requiredField' | translate}}</mat-error>
@@ -13,7 +13,7 @@
     </label>
 
     <label>
-      senha:
+      {{'login.password' | translate}}
       <input type="password" name="password" formControlName="password">
       <div>
         <mat-error *ngIf="(loginForm.touched || loginForm.dirty) && f.password.errors && f.password.errors.required">{{'errors.requiredField' | translate}}</mat-error>
@@ -22,14 +22,14 @@
       </div>
     </label>
     <div>
-       <mat-error *ngIf="feedbackLogin">Email ou senha inválidos</mat-error>
+       <mat-error *ngIf="feedbackLogin">{{'login.invalid' | translate}}</mat-error>
     </div>
 
     <div>
-      <h3>Não tem cadastro?</h3>
-      <a routerLink="/register">Cadastre-se</a>
+      <h3>{{'login.label' | translate}}</h3>
+      <a routerLink="/register">{{'login.link' | translate}}</a>
     </div>
-    <button type="submit">submit</button>
+    <button type="submit">{{'login.submit' | translate}}</button>
   </form>
 </div>
 
